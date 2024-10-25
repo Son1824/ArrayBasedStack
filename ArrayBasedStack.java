@@ -18,6 +18,7 @@ public class ArrayBasedStack {
             return;
         }
         stackArray[++top] = value;
+        System.out.println("Pushed: " + value);
     }
 
     public int pop() {
@@ -38,5 +39,17 @@ public class ArrayBasedStack {
 
     public boolean isEmpty() {
         return (top == -1);
+    }
+
+    public void display() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty!");
+            return;
+        }
+        System.out.print("Stack elements: ");
+        for (int i = 0; i <= top; i++) {
+            System.out.print(stackArray[i] + " ");
+        }
+        System.out.println();
     }
 }
